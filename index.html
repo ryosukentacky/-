@@ -1,31 +1,29 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>英単語プロジェクト 切替式全文版</title>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英単語プロジェクト カード版</title>
 <style>
-*{box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f6f8;color:#202124;margin:0}
-header{background:#fff;padding:22px 5%;border-bottom:1px solid #ddd}
-header h1{margin:0 0 7px}
-.count{color:#666}
-.controls{position:sticky;top:0;z-index:5;background:#f5f6f8;border-bottom:1px solid #ddd;padding:14px 20px}
-.controls-inner{max-width:1000px;margin:auto}
-.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
-.tab{padding:12px 18px;border:1px solid #aaa;border-radius:12px;background:#fff;font-size:16px;font-weight:650;cursor:pointer}
-.tab.active{background:#202124;color:#fff}
-.search{width:min(100%,450px);padding:12px 14px;border:1px solid #bbb;border-radius:10px;font-size:16px}
-main{max-width:1000px;margin:auto;padding:22px}
-.deck{display:none}
-.deck.active{display:block}
-.deck h2{margin-top:4px;padding-bottom:9px;border-bottom:2px solid #ddd}
-details{background:#fff;border:1px solid #ddd;border-radius:12px;margin:12px 0;overflow:hidden}
-summary{cursor:pointer;font-size:20px;font-weight:700;padding:16px}
-.lesson{padding:18px;white-space:pre-wrap;line-height:1.8;border-top:1px solid #eee}
-.notice{background:#fff8dc;border:1px solid #eadca0;padding:12px;border-radius:10px;margin-bottom:18px}
-.hidden-by-search{display:none}
-@media(max-width:650px){.tab{flex:1 1 auto;padding:10px 8px;font-size:14px}.controls{padding:10px}}
-</style></head><body><header><h1>英単語プロジェクト</h1><div class="count">3冊・合計 76項目（Define除外）</div></header>
-<div class="controls"><div class="controls-inner"><div class="tabs"><button class="tab active" data-target="deck0">英単語日常用2（23）</button><button class="tab" data-target="deck1">英文解説対応（17）</button><button class="tab" data-target="deck2">英単語 アニメ（36）</button></div><input class="search" id="search" type="search" placeholder="現在の単語帳を検索"></div></div>
-<main><div class="notice">上のボタンで単語帳を切り替えられます。単語をクリックすると解説全文が開きます。</div><section class="deck active" id="deck0"><h2>英単語日常用2（23項目）</h2><details class="entry" data-search="if all goes according to plan a【要点｜まず全体を掴みましょう】
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f4f5f7;color:#1f2328}
+header{background:#fff;padding:22px max(20px,5vw);border-bottom:1px solid #ddd}h1{margin:0 0 5px}.sub{color:#666}
+.controls{position:sticky;top:0;z-index:8;background:rgba(244,245,247,.97);border-bottom:1px solid #ddd;padding:14px 20px}
+.inner,main{max-width:1120px;margin:auto}.tabs,.cats{display:flex;gap:8px;flex-wrap:wrap}.tabs{margin-bottom:11px}
+button{cursor:pointer}.tab,.cat{border:1px solid #bbb;background:#fff;border-radius:12px;padding:11px 15px;font-weight:650}
+.tab.active{background:#202124;color:#fff}.cat.active{background:#e8edf8;border-color:#8da5d8}
+.tools{display:flex;gap:10px;margin-top:11px}input{flex:1;max-width:470px;padding:12px 14px;border:1px solid #bbb;border-radius:11px;font-size:16px}
+main{padding:22px 20px 50px}.deck{display:none}.deck.active{display:block}.deck-title{display:flex;align-items:end;justify-content:space-between;gap:12px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:18px}
+.card{border:1px solid #ddd;background:#fff;border-radius:16px;padding:18px;min-height:135px;text-align:left;box-shadow:0 1px 2px rgba(0,0,0,.03);transition:.15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 5px 16px rgba(0,0,0,.08)}.word{font-size:18px;font-weight:800;line-height:1.25;overflow-wrap:anywhere}
+.gloss{margin-top:10px;color:#555;line-height:1.4}.badge{display:inline-block;margin-top:12px;font-size:12px;padding:4px 8px;border-radius:999px;background:#f0f2f5;color:#666}
+.hidden{display:none!important}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.48);z-index:20;padding:25px}.modal.open{display:flex}
+.sheet{background:#fff;width:min(900px,100%);max-height:92vh;margin:auto;border-radius:18px;overflow:auto;box-shadow:0 18px 50px rgba(0,0,0,.25)}
+.sheet-head{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd;padding:17px 20px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+.sheet-title{font-size:23px;font-weight:800}.close{border:0;background:#eee;border-radius:50%;width:38px;height:38px;font-size:20px}
+.lesson{padding:22px;white-space:pre-wrap;line-height:1.85}.empty{padding:35px;text-align:center;color:#777}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:650px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}.card{min-height:120px;padding:14px}.word{font-size:16px}.tab,.cat{padding:9px 11px;font-size:13px}.controls{padding:10px}}
+</style></head><body>
+<header><h1>英単語プロジェクト</h1><div class="sub">3冊・合計 76項目｜カードから選んで学習</div></header>
+<div class="controls"><div class="inner"><div class="tabs"><button class="tab active" data-deck="d0">英単語日常用2（23）</button><button class="tab" data-deck="d1">英文解説対応（17）</button><button class="tab" data-deck="d2">英単語 アニメ（36）</button></div><div id="cats" class="cats"></div><div class="tools"><input id="search" type="search" placeholder="単語・意味から検索"></div></div></div><main><section class="deck active" id="d0" data-name="英単語日常用2"><div class="deck-title"><h2>英単語日常用2</h2><span>23項目</span></div><div class="grid"><button class="card" data-cat="計画・程度" data-search="if all goes according to plan すべて計画どおりに進めば 計画・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -124,7 +122,9 @@ q3. **as planned** との違いは？
 
 **if all goes according to plan = 計画が予定した流れから外れないこと。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>If all goes according to plan</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="If all goes according to plan" data-content-id="content-0-0">
+<div class="word">If all goes according to plan</div><div class="gloss">すべて計画どおりに進めば</div><span class="badge">計画・程度</span></button>
+<template id="content-0-0">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -223,7 +223,7 @@ Q3. **as planned** との違いは？
 
 **If all goes according to plan = 計画が予定した流れから外れないこと。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="to some degree a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="計画・程度" data-search="to some degree ある程度は 計画・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -322,7 +322,9 @@ q3. **to some extent** との違いは？
 
 **to some degree = 100%ではないが、一定の範囲では当てはまる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>To some degree</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="To some degree" data-content-id="content-0-1">
+<div class="word">To some degree</div><div class="gloss">ある程度は</div><span class="badge">計画・程度</span></button>
+<template id="content-0-1">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -421,7 +423,7 @@ Q3. **to some extent** との違いは？
 
 **To some degree = 100%ではないが、一定の範囲では当てはまる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="live life to the fullest a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="live life to the fullest 人生を最大限に楽しむ 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -520,7 +522,9 @@ q3. **make the most of life** との違いは？
 
 **live life to the fullest = 機会や経験をできるだけ活かして生きる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Live life to the fullest</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Live life to the fullest" data-content-id="content-0-2">
+<div class="word">Live life to the fullest</div><div class="gloss">人生を最大限に楽しむ</div><span class="badge">行動・生活</span></button>
+<template id="content-0-2">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -619,7 +623,7 @@ Q3. **make the most of life** との違いは？
 
 **Live life to the fullest = 機会や経験をできるだけ活かして生きる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="sneak in a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="sneak in こっそり入る 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -718,7 +722,9 @@ q3. **slip in** との違いは？
 
 **sneak in = 人に気づかれないように中へ入る・予定などを滑り込ませる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Sneak in</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Sneak in" data-content-id="content-0-3">
+<div class="word">Sneak in</div><div class="gloss">こっそり入る</div><span class="badge">行動・生活</span></button>
+<template id="content-0-3">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -817,7 +823,7 @@ Q3. **slip in** との違いは？
 
 **Sneak in = 人に気づかれないように中へ入る・予定などを滑り込ませる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="sign up for a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="sign up for ～に申し込む 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -916,7 +922,9 @@ q3. **register for** との違いは？
 
 **sign up for = サービス・講座・イベントなどへの参加登録をする。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Sign up for</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Sign up for" data-content-id="content-0-4">
+<div class="word">Sign up for</div><div class="gloss">～に申し込む</div><span class="badge">行動・生活</span></button>
+<template id="content-0-4">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1015,7 +1023,7 @@ Q3. **register for** との違いは？
 
 **Sign up for = サービス・講座・イベントなどへの参加登録をする。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="roughly a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="計画・程度" data-search="roughly おおよそ 計画・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1114,7 +1122,9 @@ q3. **approximately** との違いは？
 
 **roughly = 細部を厳密にせず概算する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Roughly</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Roughly" data-content-id="content-0-5">
+<div class="word">Roughly</div><div class="gloss">おおよそ</div><span class="badge">計画・程度</span></button>
+<template id="content-0-5">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1213,7 +1223,7 @@ Q3. **approximately** との違いは？
 
 **Roughly = 細部を厳密にせず概算する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="otherwise a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="条件・変化" data-search="otherwise そうでなければ 条件・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1312,7 +1322,9 @@ q3. **or else** との違いは？
 
 **otherwise = 直前の条件と違う場合の結果を示す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Otherwise</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Otherwise" data-content-id="content-0-6">
+<div class="word">Otherwise</div><div class="gloss">そうでなければ</div><span class="badge">条件・変化</span></button>
+<template id="content-0-6">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1411,7 +1423,7 @@ Q3. **or else** との違いは？
 
 **Otherwise = 直前の条件と違う場合の結果を示す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="dwindling a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="条件・変化" data-search="dwindling だんだん減る 条件・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1510,7 +1522,9 @@ q3. **declining** との違いは？
 
 **dwindling = 量・数・力などが徐々に小さくなる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Dwindling</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Dwindling" data-content-id="content-0-7">
+<div class="word">Dwindling</div><div class="gloss">だんだん減る</div><span class="badge">条件・変化</span></button>
+<template id="content-0-7">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1609,7 +1623,7 @@ Q3. **declining** との違いは？
 
 **Dwindling = 量・数・力などが徐々に小さくなる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="see yourself a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="see yourself 自分が～する姿を想像する 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1708,7 +1722,9 @@ q3. **imagine yourself** との違いは？
 
 **see yourself = 将来や状況の中の自分を心の中で描く。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>See yourself</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="See yourself" data-content-id="content-0-8">
+<div class="word">See yourself</div><div class="gloss">自分が～する姿を想像する</div><span class="badge">行動・生活</span></button>
+<template id="content-0-8">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1807,7 +1823,7 @@ Q3. **imagine yourself** との違いは？
 
 **See yourself = 将来や状況の中の自分を心の中で描く。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="much the same a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="計画・程度" data-search="much the same ほとんど同じ 計画・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -1906,7 +1922,9 @@ q3. **similar** との違いは？
 
 **much the same = 多少の違いはあっても全体としてほぼ同じ。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Much the same</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Much the same" data-content-id="content-0-9">
+<div class="word">Much the same</div><div class="gloss">ほとんど同じ</div><span class="badge">計画・程度</span></button>
+<template id="content-0-9">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2005,7 +2023,7 @@ Q3. **similar** との違いは？
 
 **Much the same = 多少の違いはあっても全体としてほぼ同じ。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="other than that a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="条件・変化" data-search="other than that それ以外は 条件・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2104,7 +2122,9 @@ q3. **apart from that** との違いは？
 
 **other than that = 今述べた一点を除外して残りを指す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Other than that</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Other than that" data-content-id="content-0-10">
+<div class="word">Other than that</div><div class="gloss">それ以外は</div><span class="badge">条件・変化</span></button>
+<template id="content-0-10">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2203,7 +2223,7 @@ Q3. **apart from that** との違いは？
 
 **Other than that = 今述べた一点を除外して残りを指す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="mindful a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="mindful 意識している 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2302,7 +2322,9 @@ q3. **aware** との違いは？
 
 **mindful = 何かを頭に置き、注意を向けている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Mindful</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Mindful" data-content-id="content-0-11">
+<div class="word">Mindful</div><div class="gloss">意識している</div><span class="badge">行動・生活</span></button>
+<template id="content-0-11">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2401,7 +2423,7 @@ Q3. **aware** との違いは？
 
 **Mindful = 何かを頭に置き、注意を向けている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="consequence a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="条件・変化" data-search="consequence 結果・重大な結果 条件・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2500,7 +2522,9 @@ q3. **result** との違いは？
 
 **consequence = 原因や行動のあとに生じるもの。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Consequence</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Consequence" data-content-id="content-0-12">
+<div class="word">Consequence</div><div class="gloss">結果・重大な結果</div><span class="badge">条件・変化</span></button>
+<template id="content-0-12">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2599,7 +2623,7 @@ Q3. **result** との違いは？
 
 **Consequence = 原因や行動のあとに生じるもの。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="give someone the benefit of the doubt a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="give someone the benefit of the doubt ひとまず善意に解釈する 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2698,7 +2722,9 @@ q3. **trust someone** との違いは？
 
 **give someone the benefit of the doubt = 証拠が不十分なとき、悪い方に決めつけない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Give someone the benefit of the doubt</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Give someone the benefit of the doubt" data-content-id="content-0-13">
+<div class="word">Give someone the benefit of the doubt</div><div class="gloss">ひとまず善意に解釈する</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-13">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2797,7 +2823,7 @@ Q3. **trust someone** との違いは？
 
 **Give someone the benefit of the doubt = 証拠が不十分なとき、悪い方に決めつけない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="bully a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="bully いじめる 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2896,7 +2922,9 @@ q3. **harass** との違いは？
 
 **bully = 力関係を利用して繰り返し威圧・攻撃する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Bully</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Bully" data-content-id="content-0-14">
+<div class="word">Bully</div><div class="gloss">いじめる</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-14">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -2995,7 +3023,7 @@ Q3. **harass** との違いは？
 
 **Bully = 力関係を利用して繰り返し威圧・攻撃する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="gang up on someone a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="gang up on someone 複数人で一人を攻撃する 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3094,7 +3122,9 @@ q3. **pick on someone** との違いは？
 
 **gang up on someone = 集団が一人にまとまって向かう。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Gang up on someone</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Gang up on someone" data-content-id="content-0-15">
+<div class="word">Gang up on someone</div><div class="gloss">複数人で一人を攻撃する</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-15">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3193,7 +3223,7 @@ Q3. **pick on someone** との違いは？
 
 **Gang up on someone = 集団が一人にまとまって向かう。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="in the first place a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="in the first place そもそも 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3292,7 +3322,9 @@ q3. **to begin with** との違いは？
 
 **in the first place = 話を原因・出発点まで戻す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>In the first place</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="In the first place" data-content-id="content-0-16">
+<div class="word">In the first place</div><div class="gloss">そもそも</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-16">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3391,7 +3423,7 @@ Q3. **to begin with** との違いは？
 
 **In the first place = 話を原因・出発点まで戻す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="questionable a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="questionable 疑わしい 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3490,7 +3522,9 @@ q3. **doubtful** との違いは？
 
 **questionable = 正しさ・適切さ・信頼性に疑問がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Questionable</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Questionable" data-content-id="content-0-17">
+<div class="word">Questionable</div><div class="gloss">疑わしい</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-17">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3589,7 +3623,7 @@ Q3. **doubtful** との違いは？
 
 **Questionable = 正しさ・適切さ・信頼性に疑問がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="instigate a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="instigate 引き起こす・扇動する 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3688,7 +3722,9 @@ q3. **provoke** との違いは？
 
 **instigate = 人を刺激して行動・変化・争いを始めさせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Instigate</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Instigate" data-content-id="content-0-18">
+<div class="word">Instigate</div><div class="gloss">引き起こす・扇動する</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-18">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3787,7 +3823,7 @@ Q3. **provoke** との違いは？
 
 **Instigate = 人を刺激して行動・変化・争いを始めさせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="privilege a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="privilege 特権 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3886,7 +3922,9 @@ q3. **right** との違いは？
 
 **privilege = 誰もが持つわけではない特別な権利・利益。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Privilege</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Privilege" data-content-id="content-0-19">
+<div class="word">Privilege</div><div class="gloss">特権</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-19">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -3985,7 +4023,7 @@ Q3. **right** との違いは？
 
 **Privilege = 誰もが持つわけではない特別な権利・利益。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="fundamentally a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="条件・変化" data-search="fundamentally 根本的に 条件・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4084,7 +4122,9 @@ q3. **basically** との違いは？
 
 **fundamentally = 表面ではなく土台・本質のレベルで。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Fundamentally</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Fundamentally" data-content-id="content-0-20">
+<div class="word">Fundamentally</div><div class="gloss">根本的に</div><span class="badge">条件・変化</span></button>
+<template id="content-0-20">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4183,7 +4223,7 @@ Q3. **basically** との違いは？
 
 **Fundamentally = 表面ではなく土台・本質のレベルで。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="navigate the world a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・生活" data-search="navigate the world 世の中をうまく渡る 行動・生活 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4282,7 +4322,9 @@ q3. **find one&#x27;s way** との違いは？
 
 **navigate the world = 複雑な社会や状況の中で判断し進む。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Navigate the world</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Navigate the world" data-content-id="content-0-21">
+<div class="word">Navigate the world</div><div class="gloss">世の中をうまく渡る</div><span class="badge">行動・生活</span></button>
+<template id="content-0-21">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4381,7 +4423,7 @@ Q3. **find one&#x27;s way** との違いは？
 
 **Navigate the world = 複雑な社会や状況の中で判断し進む。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="put someone on blast a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="人間関係・社会" data-search="put someone on blast 公の場で強く批判する 人間関係・社会 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4480,7 +4522,9 @@ q3. **call someone out** との違いは？
 
 **put someone on blast = snsなどで相手の行動を広く知らせて非難する口語表現。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Put someone on blast</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Put someone on blast" data-content-id="content-0-22">
+<div class="word">Put someone on blast</div><div class="gloss">公の場で強く批判する</div><span class="badge">人間関係・社会</span></button>
+<template id="content-0-22">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4579,7 +4623,7 @@ Q3. **call someone out** との違いは？
 
 **Put someone on blast = SNSなどで相手の行動を広く知らせて非難する口語表現。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details></section><section class="deck" id="deck1"><h2>英文解説対応（17項目）</h2><details class="entry" data-search="cancel culture a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template></div><div class="empty hidden">該当する単語がありません。</div></section><section class="deck" id="d1" data-name="英文解説対応"><div class="deck-title"><h2>英文解説対応</h2><span>17項目</span></div><div class="grid"><button class="card" data-cat="社会・議論" data-search="cancel culture キャンセル・カルチャー 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4678,7 +4722,9 @@ q3. **public shaming** との違いは？
 
 **cancel culture = 主にオンラインで批判が集中し、社会的支持や機会を失わせる現象。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>cancel culture</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="cancel culture" data-content-id="content-1-0">
+<div class="word">cancel culture</div><div class="gloss">キャンセル・カルチャー</div><span class="badge">社会・議論</span></button>
+<template id="content-1-0">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4777,7 +4823,7 @@ Q3. **public shaming** との違いは？
 
 **cancel culture = 主にオンラインで批判が集中し、社会的支持や機会を失わせる現象。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="on a very human level a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="社会・議論" data-search="on a very human level 人間的な感情のレベルでは 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4876,7 +4922,9 @@ q3. **emotionally** との違いは？
 
 **on a very human level = 制度や理屈より、人として自然な感情から見る。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>on a very human level</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="on a very human level" data-content-id="content-1-1">
+<div class="word">on a very human level</div><div class="gloss">人間的な感情のレベルでは</div><span class="badge">社会・議論</span></button>
+<template id="content-1-1">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -4975,7 +5023,7 @@ Q3. **emotionally** との違いは？
 
 **on a very human level = 制度や理屈より、人として自然な感情から見る。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="consequence a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="社会・議論" data-search="consequence 結果・重大な結果 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5074,7 +5122,9 @@ q3. **result** との違いは？
 
 **consequence = 原因や行動のあとに生じるもの。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>consequence</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="consequence" data-content-id="content-1-2">
+<div class="word">consequence</div><div class="gloss">結果・重大な結果</div><span class="badge">社会・議論</span></button>
+<template id="content-1-2">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5173,7 +5223,7 @@ Q3. **result** との違いは？
 
 **consequence = 原因や行動のあとに生じるもの。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="feel like a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="感情・認識" data-search="feel like ～のように感じる／～したい気がする 感情・認識 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5272,7 +5322,9 @@ q3. **want to** との違いは？
 
 **feel like = 感覚・印象・気分を柔らかく表す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>feel like</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="feel like" data-content-id="content-1-3">
+<div class="word">feel like</div><div class="gloss">～のように感じる／～したい気がする</div><span class="badge">感情・認識</span></button>
+<template id="content-1-3">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5371,7 +5423,7 @@ Q3. **want to** との違いは？
 
 **feel like = 感覚・印象・気分を柔らかく表す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="certain a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="感情・認識" data-search="certain ある特定の／確かな 感情・認識 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5470,7 +5522,9 @@ q3. **specific** との違いは？
 
 **certain = 文脈により『特定の』または『確信している』。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>certain</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="certain" data-content-id="content-1-4">
+<div class="word">certain</div><div class="gloss">ある特定の／確かな</div><span class="badge">感情・認識</span></button>
+<template id="content-1-4">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5569,7 +5623,7 @@ Q3. **specific** との違いは？
 
 **certain = 文脈により『特定の』または『確信している』。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="thing a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="感情・認識" data-search="thing 物・こと・事柄 感情・認識 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5668,7 +5722,9 @@ q3. **matter** との違いは？
 
 **thing = 具体物から抽象的な出来事まで広く指せる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>thing</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="thing" data-content-id="content-1-5">
+<div class="word">thing</div><div class="gloss">物・こと・事柄</div><span class="badge">感情・認識</span></button>
+<template id="content-1-5">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5767,7 +5823,7 @@ Q3. **matter** との違いは？
 
 **thing = 具体物から抽象的な出来事まで広く指せる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="give someone the benefit of the doubt a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="対人関係" data-search="give someone the benefit of the doubt ひとまず善意に解釈する 対人関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5866,7 +5922,9 @@ q3. **trust someone** との違いは？
 
 **give someone the benefit of the doubt = 証拠が不十分なとき、悪い方に決めつけない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>give someone the benefit of the doubt</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="give someone the benefit of the doubt" data-content-id="content-1-6">
+<div class="word">give someone the benefit of the doubt</div><div class="gloss">ひとまず善意に解釈する</div><span class="badge">対人関係</span></button>
+<template id="content-1-6">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -5965,7 +6023,7 @@ Q3. **trust someone** との違いは？
 
 **give someone the benefit of the doubt = 証拠が不十分なとき、悪い方に決めつけない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="bully a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="対人関係" data-search="bully いじめる 対人関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6064,7 +6122,9 @@ q3. **harass** との違いは？
 
 **bully = 力関係を利用して繰り返し威圧・攻撃する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>bully</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="bully" data-content-id="content-1-7">
+<div class="word">bully</div><div class="gloss">いじめる</div><span class="badge">対人関係</span></button>
+<template id="content-1-7">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6163,7 +6223,7 @@ Q3. **harass** との違いは？
 
 **bully = 力関係を利用して繰り返し威圧・攻撃する。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="gang up on someone a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="対人関係" data-search="gang up on someone 複数人で一人を攻撃する 対人関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6262,7 +6322,9 @@ q3. **pick on someone** との違いは？
 
 **gang up on someone = 集団が一人にまとまって向かう。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>gang up on someone</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="gang up on someone" data-content-id="content-1-8">
+<div class="word">gang up on someone</div><div class="gloss">複数人で一人を攻撃する</div><span class="badge">対人関係</span></button>
+<template id="content-1-8">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6361,7 +6423,7 @@ Q3. **pick on someone** との違いは？
 
 **gang up on someone = 集団が一人にまとまって向かう。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="in the first place a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="感情・認識" data-search="in the first place そもそも 感情・認識 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6460,7 +6522,9 @@ q3. **to begin with** との違いは？
 
 **in the first place = 話を原因・出発点まで戻す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>in the first place</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="in the first place" data-content-id="content-1-9">
+<div class="word">in the first place</div><div class="gloss">そもそも</div><span class="badge">感情・認識</span></button>
+<template id="content-1-9">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6559,7 +6623,7 @@ Q3. **to begin with** との違いは？
 
 **in the first place = 話を原因・出発点まで戻す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="questionable a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="社会・議論" data-search="questionable 疑わしい 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6658,7 +6722,9 @@ q3. **doubtful** との違いは？
 
 **questionable = 正しさ・適切さ・信頼性に疑問がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>questionable</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="questionable" data-content-id="content-1-10">
+<div class="word">questionable</div><div class="gloss">疑わしい</div><span class="badge">社会・議論</span></button>
+<template id="content-1-10">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6757,7 +6823,7 @@ Q3. **doubtful** との違いは？
 
 **questionable = 正しさ・適切さ・信頼性に疑問がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="instigate a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="社会・議論" data-search="instigate 引き起こす・扇動する 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6856,7 +6922,9 @@ q3. **provoke** との違いは？
 
 **instigate = 人を刺激して行動・変化・争いを始めさせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>instigate</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="instigate" data-content-id="content-1-11">
+<div class="word">instigate</div><div class="gloss">引き起こす・扇動する</div><span class="badge">社会・議論</span></button>
+<template id="content-1-11">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -6955,7 +7023,7 @@ Q3. **provoke** との違いは？
 
 **instigate = 人を刺激して行動・変化・争いを始めさせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="change a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・変化" data-search="change 変化・変える 行動・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7054,7 +7122,9 @@ q3. **alter** との違いは？
 
 **change = 状態を別の状態へ移す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>change</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="change" data-content-id="content-1-12">
+<div class="word">change</div><div class="gloss">変化・変える</div><span class="badge">行動・変化</span></button>
+<template id="content-1-12">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7153,7 +7223,7 @@ Q3. **alter** との違いは？
 
 **change = 状態を別の状態へ移す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="behavior a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・変化" data-search="behavior 行動・振る舞い 行動・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7252,7 +7322,9 @@ q3. **conduct** との違いは？
 
 **behavior = 人や動物が実際に示す行動の仕方。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>behavior</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="behavior" data-content-id="content-1-13">
+<div class="word">behavior</div><div class="gloss">行動・振る舞い</div><span class="badge">行動・変化</span></button>
+<template id="content-1-13">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7351,7 +7423,7 @@ Q3. **conduct** との違いは？
 
 **behavior = 人や動物が実際に示す行動の仕方。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="responsible a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・変化" data-search="responsible 責任がある 行動・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7450,7 +7522,9 @@ q3. **accountable** との違いは？
 
 **responsible = 行動の結果を引き受ける立場・性質。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>responsible</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="responsible" data-content-id="content-1-14">
+<div class="word">responsible</div><div class="gloss">責任がある</div><span class="badge">行動・変化</span></button>
+<template id="content-1-14">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7549,7 +7623,7 @@ Q3. **accountable** との違いは？
 
 **responsible = 行動の結果を引き受ける立場・性質。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="punish a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="行動・変化" data-search="punish 罰する 行動・変化 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7648,7 +7722,9 @@ q3. **discipline** との違いは？
 
 **punish = 違反や悪い行為に対して不利益を与える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>punish</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="punish" data-content-id="content-1-15">
+<div class="word">punish</div><div class="gloss">罰する</div><span class="badge">行動・変化</span></button>
+<template id="content-1-15">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7747,7 +7823,7 @@ Q3. **discipline** との違いは？
 
 **punish = 違反や悪い行為に対して不利益を与える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="extreme a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="社会・議論" data-search="extreme 極端な 社会・議論 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7846,7 +7922,9 @@ q3. **excessive** との違いは？
 
 **extreme = 通常の範囲の端を越えるほど強い。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>extreme</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="extreme" data-content-id="content-1-16">
+<div class="word">extreme</div><div class="gloss">極端な</div><span class="badge">社会・議論</span></button>
+<template id="content-1-16">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -7945,7 +8023,7 @@ Q3. **excessive** との違いは？
 
 **extreme = 通常の範囲の端を越えるほど強い。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details></section><section class="deck" id="deck2"><h2>英単語 アニメ（36項目）</h2><details class="entry" data-search="essential a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template></div><div class="empty hidden">該当する単語がありません。</div></section><section class="deck" id="d2" data-name="英単語 アニメ"><div class="deck-title"><h2>英単語 アニメ</h2><span>36項目</span></div><div class="grid"><button class="card" data-cat="重要・程度" data-search="essential 不可欠な 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8044,7 +8122,9 @@ q3. **necessary** との違いは？
 
 **essential = それがないと成立しないほど必要。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Essential</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Essential" data-content-id="content-2-0">
+<div class="word">Essential</div><div class="gloss">不可欠な</div><span class="badge">重要・程度</span></button>
+<template id="content-2-0">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8143,7 +8223,7 @@ Q3. **necessary** との違いは？
 
 **Essential = それがないと成立しないほど必要。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="crucial a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="重要・程度" data-search="crucial 極めて重要な 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8242,7 +8322,9 @@ q3. **essential** との違いは？
 
 **crucial = 結果を左右する決定的な地点にある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Crucial</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Crucial" data-content-id="content-2-1">
+<div class="word">Crucial</div><div class="gloss">極めて重要な</div><span class="badge">重要・程度</span></button>
+<template id="content-2-1">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8341,7 +8423,7 @@ Q3. **essential** との違いは？
 
 **Crucial = 結果を左右する決定的な地点にある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="significant a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="重要・程度" data-search="significant 重要な・意味のある 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8440,7 +8522,9 @@ q3. **important** との違いは？
 
 **significant = 無視できない意味・影響・大きさがある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Significant</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Significant" data-content-id="content-2-2">
+<div class="word">Significant</div><div class="gloss">重要な・意味のある</div><span class="badge">重要・程度</span></button>
+<template id="content-2-2">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8539,7 +8623,7 @@ Q3. **important** との違いは？
 
 **Significant = 無視できない意味・影響・大きさがある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="matter a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="重要・程度" data-search="matter 重要である／事柄 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8638,7 +8722,9 @@ q3. **count** との違いは？
 
 **matter = 結果や人にとって意味を持つ。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Matter</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Matter" data-content-id="content-2-3">
+<div class="word">Matter</div><div class="gloss">重要である／事柄</div><span class="badge">重要・程度</span></button>
+<template id="content-2-3">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8737,7 +8823,7 @@ Q3. **count** との違いは？
 
 **Matter = 結果や人にとって意味を持つ。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="count a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="重要・程度" data-search="count 数える／重要である 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8836,7 +8922,9 @@ q3. **matter** との違いは？
 
 **count = 数として扱うことから『価値がある』へ広がる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Count</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Count" data-content-id="content-2-4">
+<div class="word">Count</div><div class="gloss">数える／重要である</div><span class="badge">重要・程度</span></button>
+<template id="content-2-4">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -8935,7 +9023,7 @@ Q3. **matter** との違いは？
 
 **Count = 数として扱うことから『価値がある』へ広がる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="rival a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="評価・関係" data-search="rival 競争相手 評価・関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9034,7 +9122,9 @@ q3. **competitor** との違いは？
 
 **rival = 同じ目標・市場・地位を争う相手。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Rival</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Rival" data-content-id="content-2-5">
+<div class="word">Rival</div><div class="gloss">競争相手</div><span class="badge">評価・関係</span></button>
+<template id="content-2-5">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9133,7 +9223,7 @@ Q3. **competitor** との違いは？
 
 **Rival = 同じ目標・市場・地位を争う相手。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="common a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="common 一般的な・よくある 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9232,7 +9322,9 @@ q3. **ordinary** との違いは？
 
 **common = 多くの人・場所に広く見られる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Common</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Common" data-content-id="content-2-6">
+<div class="word">Common</div><div class="gloss">一般的な・よくある</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-6">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9331,7 +9423,7 @@ Q3. **ordinary** との違いは？
 
 **Common = 多くの人・場所に広く見られる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="ordinary a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="ordinary 普通の 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9430,7 +9522,9 @@ q3. **common** との違いは？
 
 **ordinary = 特別・異常ではない通常の状態。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Ordinary</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Ordinary" data-content-id="content-2-7">
+<div class="word">Ordinary</div><div class="gloss">普通の</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-7">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9529,7 +9623,7 @@ Q3. **common** との違いは？
 
 **Ordinary = 特別・異常ではない通常の状態。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="familiar a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="familiar よく知っている・見慣れた 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9628,7 +9722,9 @@ q3. **common** との違いは？
 
 **familiar = 過去の接触によって『知っている感じ』がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Familiar</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Familiar" data-content-id="content-2-8">
+<div class="word">Familiar</div><div class="gloss">よく知っている・見慣れた</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-8">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9727,7 +9823,7 @@ Q3. **common** との違いは？
 
 **Familiar = 過去の接触によって『知っている感じ』がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="emphasize a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="評価・関係" data-search="emphasize 強調する 評価・関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9826,7 +9922,9 @@ q3. **stress** との違いは？
 
 **emphasize = 重要な点を目立たせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Emphasize</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Emphasize" data-content-id="content-2-9">
+<div class="word">Emphasize</div><div class="gloss">強調する</div><span class="badge">評価・関係</span></button>
+<template id="content-2-9">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -9925,7 +10023,7 @@ Q3. **stress** との違いは？
 
 **Emphasize = 重要な点を目立たせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="neglect a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="評価・関係" data-search="neglect 怠る・放置する 評価・関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10024,7 +10122,9 @@ q3. **ignore** との違いは？
 
 **neglect = 必要な注意・世話を十分に与えない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Neglect</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Neglect" data-content-id="content-2-10">
+<div class="word">Neglect</div><div class="gloss">怠る・放置する</div><span class="badge">評価・関係</span></button>
+<template id="content-2-10">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10123,7 +10223,7 @@ Q3. **ignore** との違いは？
 
 **Neglect = 必要な注意・世話を十分に与えない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="eminent a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="評価・関係" data-search="eminent 高名な 評価・関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10222,7 +10322,9 @@ q3. **prominent** との違いは？
 
 **eminent = 専門分野で高い地位・尊敬を得ている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Eminent</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Eminent" data-content-id="content-2-11">
+<div class="word">Eminent</div><div class="gloss">高名な</div><span class="badge">評価・関係</span></button>
+<template id="content-2-11">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10321,7 +10423,7 @@ Q3. **prominent** との違いは？
 
 **Eminent = 専門分野で高い地位・尊敬を得ている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="prominent a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="評価・関係" data-search="prominent 著名な・目立つ 評価・関係 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10420,7 +10522,9 @@ q3. **eminent** との違いは？
 
 **prominent = 人・物が周囲より目立ち、重要な位置にある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Prominent</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Prominent" data-content-id="content-2-12">
+<div class="word">Prominent</div><div class="gloss">著名な・目立つ</div><span class="badge">評価・関係</span></button>
+<template id="content-2-12">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10519,7 +10623,7 @@ Q3. **eminent** との違いは？
 
 **Prominent = 人・物が周囲より目立ち、重要な位置にある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="slight a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="重要・程度" data-search="slight わずかな 重要・程度 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10618,7 +10722,9 @@ q3. **minor** との違いは？
 
 **slight = 程度や量が小さい。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Slight</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Slight" data-content-id="content-2-13">
+<div class="word">Slight</div><div class="gloss">わずかな</div><span class="badge">重要・程度</span></button>
+<template id="content-2-13">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10717,7 +10823,7 @@ Q3. **minor** との違いは？
 
 **Slight = 程度や量が小さい。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="character a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="character 性格・特徴 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10816,7 +10922,9 @@ q3. **personality** との違いは？
 
 **character = 人や物をそのものらしくする性質。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Character</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Character" data-content-id="content-2-14">
+<div class="word">Character</div><div class="gloss">性格・特徴</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-14">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -10915,7 +11023,7 @@ Q3. **personality** との違いは？
 
 **Character = 人や物をそのものらしくする性質。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="feature a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="feature 特徴・機能 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11014,7 +11122,9 @@ q3. **characteristic** との違いは？
 
 **feature = 目立つ性質や製品の機能。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Feature</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Feature" data-content-id="content-2-15">
+<div class="word">Feature</div><div class="gloss">特徴・機能</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-15">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11113,7 +11223,7 @@ Q3. **characteristic** との違いは？
 
 **Feature = 目立つ性質や製品の機能。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="typical a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="typical 典型的な 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11212,7 +11322,9 @@ q3. **characteristic** との違いは？
 
 **typical = ある種類の代表例としてよく見られる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Typical</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Typical" data-content-id="content-2-16">
+<div class="word">Typical</div><div class="gloss">典型的な</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-16">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11311,7 +11423,7 @@ Q3. **characteristic** との違いは？
 
 **Typical = ある種類の代表例としてよく見られる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="peculiar a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="peculiar 独特な・奇妙な 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11410,7 +11522,9 @@ q3. **strange** との違いは？
 
 **peculiar = 他と違っていて、ときに変わって見える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Peculiar</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Peculiar" data-content-id="content-2-17">
+<div class="word">Peculiar</div><div class="gloss">独特な・奇妙な</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-17">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11509,7 +11623,7 @@ Q3. **strange** との違いは？
 
 **Peculiar = 他と違っていて、ときに変わって見える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="particular a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="particular 特定の・特別な 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11608,7 +11722,9 @@ q3. **specific** との違いは？
 
 **particular = 広い集合から一つを絞り込む。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Particular</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Particular" data-content-id="content-2-18">
+<div class="word">Particular</div><div class="gloss">特定の・特別な</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-18">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11707,7 +11823,7 @@ Q3. **specific** との違いは？
 
 **Particular = 広い集合から一つを絞り込む。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="general a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="general 一般的な・全体的な 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11806,7 +11922,9 @@ q3. **overall** との違いは？
 
 **general = 細部ではなく広い範囲を扱う。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>General</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="General" data-content-id="content-2-19">
+<div class="word">General</div><div class="gloss">一般的な・全体的な</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-19">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -11905,7 +12023,7 @@ Q3. **overall** との違いは？
 
 **General = 細部ではなく広い範囲を扱う。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="specify a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="specify 明確に指定する 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12004,7 +12122,9 @@ q3. **clarify** との違いは？
 
 **specify = 曖昧さをなくすため具体的に示す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Specify</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Specify" data-content-id="content-2-20">
+<div class="word">Specify</div><div class="gloss">明確に指定する</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-20">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12103,7 +12223,7 @@ Q3. **clarify** との違いは？
 
 **Specify = 曖昧さをなくすため具体的に示す。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="distinct a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="distinct はっきり異なる 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12202,7 +12322,9 @@ q3. **different** との違いは？
 
 **distinct = 他と区別できる境界・特徴がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Distinct</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Distinct" data-content-id="content-2-21">
+<div class="word">Distinct</div><div class="gloss">はっきり異なる</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-21">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12301,7 +12423,7 @@ Q3. **different** との違いは？
 
 **Distinct = 他と区別できる境界・特徴がある。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="vague a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="vague 曖昧な 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12400,7 +12522,9 @@ q3. **ambiguous** との違いは？
 
 **vague = 情報が足りず輪郭がぼやけている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Vague</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Vague" data-content-id="content-2-22">
+<div class="word">Vague</div><div class="gloss">曖昧な</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-22">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12499,7 +12623,7 @@ Q3. **ambiguous** との違いは？
 
 **Vague = 情報が足りず輪郭がぼやけている。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="obscure a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="obscure 不明瞭な・よく知られていない 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12598,7 +12722,9 @@ q3. **vague** との違いは？
 
 **obscure = 見えにくい・理解しにくい・知名度が低い。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Obscure</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Obscure" data-content-id="content-2-23">
+<div class="word">Obscure</div><div class="gloss">不明瞭な・よく知られていない</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-23">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12697,7 +12823,7 @@ Q3. **vague** との違いは？
 
 **Obscure = 見えにくい・理解しにくい・知名度が低い。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="obvious a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="obvious 明らかな 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12796,7 +12922,9 @@ q3. **apparent** との違いは？
 
 **obvious = 説明されなくてもすぐ分かるほど明白。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Obvious</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Obvious" data-content-id="content-2-24">
+<div class="word">Obvious</div><div class="gloss">明らかな</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-24">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12895,7 +13023,7 @@ Q3. **apparent** との違いは？
 
 **Obvious = 説明されなくてもすぐ分かるほど明白。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="apparent a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="apparent 見かけ上明らかな 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -12994,7 +13122,9 @@ q3. **obvious** との違いは？
 
 **apparent = 外から見てそう見える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Apparent</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Apparent" data-content-id="content-2-25">
+<div class="word">Apparent</div><div class="gloss">見かけ上明らかな</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-25">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13093,7 +13223,7 @@ Q3. **obvious** との違いは？
 
 **Apparent = 外から見てそう見える。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="respectively a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="respectively それぞれ・順に 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13192,7 +13322,9 @@ q3. **each** との違いは？
 
 **respectively = 並べた複数項目を同じ順番で対応させる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Respectively</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Respectively" data-content-id="content-2-26">
+<div class="word">Respectively</div><div class="gloss">それぞれ・順に</div><span class="badge">構造・構成</span></button>
+<template id="content-2-26">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13291,7 +13423,7 @@ Q3. **each** との違いは？
 
 **Respectively = 並べた複数項目を同じ順番で対応させる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="detail a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="detail 詳細・細部 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13390,7 +13522,9 @@ q3. **specifics** との違いは？
 
 **detail = 全体を構成する小さな情報。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Detail</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Detail" data-content-id="content-2-27">
+<div class="word">Detail</div><div class="gloss">詳細・細部</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-27">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13489,7 +13623,7 @@ Q3. **specifics** との違いは？
 
 **Detail = 全体を構成する小さな情報。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="precise a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="precise 精密な・厳密な 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13588,7 +13722,9 @@ q3. **accurate** との違いは？
 
 **precise = 範囲や表現が細かく絞られ、ぶれが小さい。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Precise</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Precise" data-content-id="content-2-28">
+<div class="word">Precise</div><div class="gloss">精密な・厳密な</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-28">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13687,7 +13823,7 @@ Q3. **accurate** との違いは？
 
 **Precise = 範囲や表現が細かく絞られ、ぶれが小さい。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="accurate a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="明確・曖昧" data-search="accurate 正確な 明確・曖昧 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13786,7 +13922,9 @@ q3. **precise** との違いは？
 
 **accurate = 事実・正解・実際の値と一致している。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Accurate</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Accurate" data-content-id="content-2-29">
+<div class="word">Accurate</div><div class="gloss">正確な</div><span class="badge">明確・曖昧</span></button>
+<template id="content-2-29">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13885,7 +14023,7 @@ Q3. **precise** との違いは？
 
 **Accurate = 事実・正解・実際の値と一致している。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="structure a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="structure 構造・構成 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -13984,7 +14122,9 @@ q3. **framework** との違いは？
 
 **structure = 部分がどう組み合わされ全体を作るか。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Structure</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Structure" data-content-id="content-2-30">
+<div class="word">Structure</div><div class="gloss">構造・構成</div><span class="badge">構造・構成</span></button>
+<template id="content-2-30">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14083,7 +14223,7 @@ Q3. **framework** との違いは？
 
 **Structure = 部分がどう組み合わされ全体を作るか。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="construct a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="construct 建設する・組み立てる 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14182,7 +14322,9 @@ q3. **build** との違いは？
 
 **construct = 部品や要素を組み合わせて作る。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Construct</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Construct" data-content-id="content-2-31">
+<div class="word">Construct</div><div class="gloss">建設する・組み立てる</div><span class="badge">構造・構成</span></button>
+<template id="content-2-31">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14281,7 +14423,7 @@ Q3. **build** との違いは？
 
 **Construct = 部品や要素を組み合わせて作る。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="constitute a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="constitute 構成する 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14380,7 +14522,9 @@ q3. **comprise** との違いは？
 
 **constitute = 複数の要素が全体を成り立たせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Constitute</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Constitute" data-content-id="content-2-32">
+<div class="word">Constitute</div><div class="gloss">構成する</div><span class="badge">構造・構成</span></button>
+<template id="content-2-32">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14479,7 +14623,7 @@ Q3. **comprise** との違いは？
 
 **Constitute = 複数の要素が全体を成り立たせる。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="institute a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="institute 機関／設立・導入する 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14578,7 +14722,9 @@ q3. **establish** との違いは？
 
 **institute = 組織、または制度・措置を正式に始める。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Institute</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Institute" data-content-id="content-2-33">
+<div class="word">Institute</div><div class="gloss">機関／設立・導入する</div><span class="badge">構造・構成</span></button>
+<template id="content-2-33">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14677,7 +14823,7 @@ Q3. **establish** との違いは？
 
 **Institute = 組織、または制度・措置を正式に始める。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="substitute a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="構造・構成" data-search="substitute 代用する 構造・構成 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14776,7 +14922,9 @@ q3. **replace** との違いは？
 
 **substitute = 本来のものの位置に別のものを置く。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Substitute</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Substitute" data-content-id="content-2-34">
+<div class="word">Substitute</div><div class="gloss">代用する</div><span class="badge">構造・構成</span></button>
+<template id="content-2-34">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14875,7 +15023,7 @@ Q3. **replace** との違いは？
 
 **Substitute = 本来のものの位置に別のものを置く。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details><details class="entry" data-search="stable a【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template><button class="card" data-cat="特徴・性質" data-search="stable 安定した 特徴・性質 a【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -14974,7 +15122,9 @@ q3. **steady** との違いは？
 
 **stable = 大きく揺れたり変化したりしない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」"><summary>Stable</summary><div class="lesson">A【要点｜まず全体を掴みましょう】
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」" data-title="Stable" data-content-id="content-2-35">
+<div class="word">Stable</div><div class="gloss">安定した</div><span class="badge">特徴・性質</span></button>
+<template id="content-2-35">A【要点｜まず全体を掴みましょう】
 
 「先輩、いきなり細かいところを全部覚えようとしてませんか？ ……もう。まず核です。」
 
@@ -15073,29 +15223,28 @@ Q3. **steady** との違いは？
 
 **Stable = 大きく揺れたり変化したりしない。**
 
-「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</div></details></section>
-</main>
+「先輩、全部を丸暗記しなくていいです。でも、この一文を見たら意味・場面・似た表現まで戻せるようにしてくださいね。……せっかくここまで一緒にやったんですから。」</template></div><div class="empty hidden">該当する単語がありません。</div></section></main>
+<div class="modal" id="modal"><article class="sheet"><div class="sheet-head"><div class="sheet-title" id="modalTitle"></div><button class="close" id="close" aria-label="閉じる">×</button></div><div class="lesson" id="lesson"></div></article></div>
 <script>
-const tabs=[...document.querySelectorAll('.tab')];
-const decks=[...document.querySelectorAll('.deck')];
-const search=document.getElementById('search');
-
-function selectDeck(id){
-  tabs.forEach(b=>b.classList.toggle('active',b.dataset.target===id));
-  decks.forEach(d=>d.classList.toggle('active',d.id===id));
-  search.value='';
-  filterEntries();
-  window.scrollTo({top:0,behavior:'smooth'});
+const tabs=[...document.querySelectorAll('.tab')], decks=[...document.querySelectorAll('.deck')];
+const cats=document.getElementById('cats'), search=document.getElementById('search');
+const modal=document.getElementById('modal'), title=document.getElementById('modalTitle'), lesson=document.getElementById('lesson');
+let selectedCat='すべて';
+function activeDeck(){return document.querySelector('.deck.active')}
+function rebuildCats(){
+  const ds=activeDeck(), names=[...new Set([...ds.querySelectorAll('.card')].map(x=>x.dataset.cat))];
+  cats.innerHTML='';
+  ['すべて',...names].forEach(n=>{const b=document.createElement('button');b.className='cat'+(n===selectedCat?' active':'');b.textContent=n;b.onclick=()=>{selectedCat=n;rebuildCats();filter()};cats.appendChild(b)})
 }
-tabs.forEach(b=>b.addEventListener('click',()=>selectDeck(b.dataset.target)));
-
-function filterEntries(){
-  const q=search.value.trim().toLowerCase();
-  const active=document.querySelector('.deck.active');
-  if(!active)return;
-  active.querySelectorAll('.entry').forEach(e=>{
-    e.classList.toggle('hidden-by-search', q && !e.dataset.search.includes(q));
-  });
+function filter(){
+  const q=search.value.trim().toLowerCase(), ds=activeDeck(); let shown=0;
+  ds.querySelectorAll('.card').forEach(c=>{const okCat=selectedCat==='すべて'||c.dataset.cat===selectedCat;const okQ=!q||c.dataset.search.includes(q);const ok=okCat&&okQ;c.classList.toggle('hidden',!ok);if(ok)shown++});
+  ds.querySelector('.empty').classList.toggle('hidden',shown!==0)
 }
-search.addEventListener('input',filterEntries);
+tabs.forEach(b=>b.onclick=()=>{tabs.forEach(x=>x.classList.toggle('active',x===b));decks.forEach(d=>d.classList.toggle('active',d.id===b.dataset.deck));selectedCat='すべて';search.value='';rebuildCats();filter();window.scrollTo({top:0,behavior:'smooth'})});
+search.oninput=filter;
+document.querySelectorAll('.card').forEach(c=>c.onclick=()=>{title.textContent=c.dataset.title;const t=document.getElementById(c.dataset.contentId);lesson.textContent=t.content.textContent;modal.classList.add('open');document.body.style.overflow='hidden'});
+function closeModal(){modal.classList.remove('open');document.body.style.overflow=''}
+document.getElementById('close').onclick=closeModal;modal.onclick=e=>{if(e.target===modal)closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+rebuildCats();filter();
 </script></body></html>
