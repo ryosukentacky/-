@@ -1,0 +1,336 @@
+[
+  {
+    "id": "daily2",
+    "title": "英単語日常用2",
+    "source_chat": "英単語プロジェクト / 英単語日常用2",
+    "update_rule": "約10語増えたら差分更新",
+    "entries": [
+      {
+        "word": "If all goes according to plan",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "To some degree",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Live life to the fullest",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Sneak in",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Sign up for",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Roughly",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Otherwise",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Dwindling",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "See yourself",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Much the same",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Other than that",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Mindful",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Consequence",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Give someone the benefit of the doubt",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Bully",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Gang up on someone",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "In the first place",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Questionable",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Instigate",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Privilege",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Fundamentally",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Navigate the world",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Put someone on blast",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      }
+    ]
+  },
+  {
+    "id": "sentence",
+    "title": "英文解説対応",
+    "source_chat": "英単語プロジェクト / 英文解説対応",
+    "update_rule": "1トピック終了後の「更新」で差分更新",
+    "entries": [
+      {
+        "word": "cancel culture",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "on a very human level",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "consequence",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "feel like",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "certain",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "thing",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "give someone the benefit of the doubt",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "bully",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "gang up on someone",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "in the first place",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "questionable",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "instigate",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "change",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "behavior",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "responsible",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "punish",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "extreme",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      }
+    ]
+  },
+  {
+    "id": "anime",
+    "title": "英単語 アニメ",
+    "source_chat": "英単語プロジェクト / 英単語 アニメ",
+    "update_rule": "他の単語帳と分離して差分更新",
+    "entries": [
+      {
+        "word": "Essential",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Crucial",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Significant",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Matter",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Count",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Rival",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Common",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Ordinary",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Familiar",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Emphasize",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Neglect",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Eminent",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Prominent",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Slight",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Character",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Feature",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Typical",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Peculiar",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Particular",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "General",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Specify",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      },
+      {
+        "word": "Distinct",
+        "full_chat_content": "",
+        "content_status": "pending_original_retrieval"
+      }
+    ]
+  }
+]

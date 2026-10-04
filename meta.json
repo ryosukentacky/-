@@ -1,0 +1,13 @@
+{
+  "version": "2026-10-04",
+  "counts": {
+    "daily2": 23,
+    "sentence": 17,
+    "anime": 22
+  },
+  "total": 62,
+  "excluded": [
+    "Define"
+  ],
+  "full_text_policy": "実際の元チャット解説全文を省略せず保存。未取得本文は推測で補完しない。"
+}
