@@ -1,0 +1,287 @@
+﻿deck,word,A_chars,B_chars,C_chars,D_chars,A-D_length_ok,synonym_block,image_block,Q1-Q3,30sec,one_sentence
+英単語日常用2,If all goes according to plan,584,1158,809,1600,True,True,True,True,True,True
+英単語日常用2,To some degree,501,988,689,1351,True,True,True,True,True,True
+英単語日常用2,Live life to the fullest,556,1089,766,1507,True,True,True,True,True,True
+英単語日常用2,Sneak in,488,930,648,1291,True,True,True,True,True,True
+英単語日常用2,Sign up for,463,941,642,1294,True,True,True,True,True,True
+英単語日常用2,Roughly,458,911,627,1267,True,True,True,True,True,True
+英単語日常用2,Otherwise,508,959,670,1309,True,True,True,True,True,True
+英単語日常用2,Dwindling,471,933,641,1279,True,True,True,True,True,True
+英単語日常用2,See yourself,490,976,669,1348,True,True,True,True,True,True
+英単語日常用2,Much the same,477,981,663,1330,True,True,True,True,True,True
+英単語日常用2,Other than that,494,999,685,1357,True,True,True,True,True,True
+英単語日常用2,Mindful,449,897,611,1234,True,True,True,True,True,True
+英単語日常用2,Consequence,470,942,644,1279,True,True,True,True,True,True
+英単語日常用2,Give someone the benefit of the doubt,656,1230,877,1681,True,True,True,True,True,True
+英単語日常用2,Bully,481,917,638,1249,True,True,True,True,True,True
+英単語日常用2,Gang up on someone,515,1003,698,1387,True,True,True,True,True,True
+英単語日常用2,In the first place,480,992,676,1363,True,True,True,True,True,True
+英単語日常用2,Questionable,492,955,664,1318,True,True,True,True,True,True
+英単語日常用2,Instigate,476,927,643,1279,True,True,True,True,True,True
+英単語日常用2,Privilege,504,962,673,1306,True,True,True,True,True,True
+英単語日常用2,Fundamentally,496,970,673,1333,True,True,True,True,True,True
+英単語日常用2,Navigate the world,532,1034,721,1423,True,True,True,True,True,True
+英単語日常用2,Put someone on blast,548,1058,746,1456,True,True,True,True,True,True
+英文解説対応,cancel culture,526,1017,709,1381,True,True,True,True,True,True
+英文解説対応,on a very human level,551,1078,743,1453,True,True,True,True,True,True
+英文解説対応,consequence,470,942,644,1279,True,True,True,True,True,True
+英文解説対応,feel like,508,955,670,1330,True,True,True,True,True,True
+英文解説対応,certain,470,915,636,1267,True,True,True,True,True,True
+英文解説対応,thing,454,890,614,1222,True,True,True,True,True,True
+英文解説対応,give someone the benefit of the doubt,656,1230,877,1681,True,True,True,True,True,True
+英文解説対応,bully,481,917,638,1249,True,True,True,True,True,True
+英文解説対応,gang up on someone,515,1003,698,1387,True,True,True,True,True,True
+英文解説対応,in the first place,480,992,676,1363,True,True,True,True,True,True
+英文解説対応,questionable,492,955,664,1318,True,True,True,True,True,True
+英文解説対応,instigate,476,927,643,1279,True,True,True,True,True,True
+英文解説対応,change,438,882,600,1213,True,True,True,True,True,True
+英文解説対応,behavior,461,914,628,1255,True,True,True,True,True,True
+英文解説対応,responsible,454,927,633,1282,True,True,True,True,True,True
+英文解説対応,punish,415,872,583,1198,True,True,True,True,True,True
+英文解説対応,extreme,436,893,607,1225,True,True,True,True,True,True
+英単語 アニメ,Essential,447,2394,621,1252,True,True,True,True,True,True
+英単語 アニメ,Crucial,455,2385,622,1243,True,True,True,True,True,True
+英単語 アニメ,Significant,491,958,663,1315,True,True,True,True,True,True
+英単語 アニメ,Matter,452,2374,619,1249,True,True,True,True,True,True
+英単語 アニメ,Count,480,917,641,1255,True,True,True,True,True,True
+英単語 アニメ,Rival,431,884,598,1210,True,True,True,True,True,True
+英単語 アニメ,Common,432,874,592,1213,True,True,True,True,True,True
+英単語 アニメ,Ordinary,421,878,591,1213,True,True,True,True,True,True
+英単語 アニメ,Familiar,474,2406,639,1285,True,True,True,True,True,True
+英単語 アニメ,Emphasize,447,913,618,1243,True,True,True,True,True,True
+英単語 アニメ,Neglect,456,913,620,1240,True,True,True,True,True,True
+英単語 アニメ,Eminent,424,889,599,1228,True,True,True,True,True,True
+英単語 アニメ,Prominent,467,925,635,1270,True,True,True,True,True,True
+英単語 アニメ,Slight,408,853,572,1186,True,True,True,True,True,True
+英単語 アニメ,Character,480,925,647,1303,True,True,True,True,True,True
+英単語 アニメ,Feature,426,884,600,1237,True,True,True,True,True,True
+英単語 アニメ,Typical,437,906,612,1243,True,True,True,True,True,True
+英単語 アニメ,Peculiar,481,933,648,1270,True,True,True,True,True,True
+英単語 アニメ,Particular,455,919,627,1270,True,True,True,True,True,True
+英単語 アニメ,General,454,895,617,1246,True,True,True,True,True,True
+英単語 アニメ,Specify,469,916,631,1249,True,True,True,True,True,True
+英単語 アニメ,Distinct,440,895,610,1243,True,True,True,True,True,True
+英単語 アニメ,Vague,426,878,591,1195,True,True,True,True,True,True
+英単語 アニメ,Obscure,471,912,633,1261,True,True,True,True,True,True
+英単語 アニメ,Obvious,429,879,595,1210,True,True,True,True,True,True
+英単語 アニメ,Apparent,483,934,648,1276,True,True,True,True,True,True
+英単語 アニメ,Respectively,482,967,666,1315,True,True,True,True,True,True
+英単語 アニメ,Detail,429,2363,597,1219,True,True,True,True,True,True
+英単語 アニメ,Precise,464,914,627,1243,True,True,True,True,True,True
+英単語 アニメ,Accurate,425,880,596,1219,True,True,True,True,True,True
+英単語 アニメ,Structure,460,924,633,1264,True,True,True,True,True,True
+英単語 アニメ,Construct,447,905,617,1240,True,True,True,True,True,True
+英単語 アニメ,Constitute,466,919,634,1282,True,True,True,True,True,True
+英単語 アニメ,Institute,482,947,656,1294,True,True,True,True,True,True
+英単語 アニメ,Substitute,464,927,634,1276,True,True,True,True,True,True
+英単語 アニメ,Stable,444,893,609,1216,True,True,True,True,True,True
+英単語プロジェクト過去分,abundant,232,454,337,1474,True,True,True,True,True,True
+英単語プロジェクト過去分,active recall,223,422,388,914,True,True,True,True,True,True
+英単語プロジェクト過去分,aging population,225,424,399,917,True,True,True,True,True,True
+英単語プロジェクト過去分,aim for,194,393,343,823,True,True,True,True,True,True
+英単語プロジェクト過去分,approval,260,782,421,2097,True,True,True,True,True,True
+英単語プロジェクト過去分,automotive,199,398,355,845,True,True,True,True,True,True
+英単語プロジェクト過去分,blow,176,375,314,782,True,True,True,True,True,True
+英単語プロジェクト過去分,bookkeeping,193,392,347,837,True,True,True,True,True,True
+英単語プロジェクト過去分,brief,242,443,388,1057,True,True,True,True,True,True
+英単語プロジェクト過去分,bury,244,599,434,1192,True,True,True,True,True,True
+英単語プロジェクト過去分,carbon emissions,231,430,405,935,True,True,True,True,True,True
+英単語プロジェクト過去分,certification,197,396,355,853,True,True,True,True,True,True
+英単語プロジェクト過去分,chip away at,210,409,372,876,True,True,True,True,True,True
+英単語プロジェクト過去分,clarify,278,1282,458,2067,True,True,True,True,True,True
+英単語プロジェクト過去分,clean energy,213,412,375,885,True,True,True,True,True,True
+英単語プロジェクト過去分,collaborate,349,1382,486,2220,True,True,True,True,True,True
+英単語プロジェクト過去分,collapse,192,391,342,826,True,True,True,True,True,True
+英単語プロジェクト過去分,combo,192,391,333,829,True,True,True,True,True,True
+英単語プロジェクト過去分,confirm,278,1321,436,2038,True,True,True,True,True,True
+英単語プロジェクト過去分,consolidate,207,406,366,868,True,True,True,True,True,True
+英単語プロジェクト過去分,counterattack,197,396,355,853,True,True,True,True,True,True
+英単語プロジェクト過去分,CPA,251,450,415,921,True,True,True,True,True,True
+英単語プロジェクト過去分,declining birthrate,218,417,391,919,True,True,True,True,True,True
+英単語プロジェクト過去分,deflect,191,390,338,824,True,True,True,True,True,True
+英単語プロジェクト過去分,depend,230,523,507,1271,True,True,True,True,True,True
+英単語プロジェクト過去分,detect,260,782,438,1721,True,True,True,True,True,True
+英単語プロジェクト過去分,develop,290,905,587,1496,True,True,True,True,True,True
+英単語プロジェクト過去分,dispense,278,1303,478,2065,True,True,True,True,True,True
+英単語プロジェクト過去分,dodge,247,376,368,943,True,True,True,True,True,True
+英単語プロジェクト過去分,double-edged,219,418,381,903,True,True,True,True,True,True
+英単語プロジェクト過去分,electronics,199,398,355,849,True,True,True,True,True,True
+英単語プロジェクト過去分,end up,246,581,459,1203,True,True,True,True,True,True
+英単語プロジェクト過去分,energy efficiency,205,404,371,885,True,True,True,True,True,True
+英単語プロジェクト過去分,environmental sustainability,230,429,419,979,True,True,True,True,True,True
+英単語プロジェクト過去分,expense,242,616,357,1857,True,True,True,True,True,True
+英単語プロジェクト過去分,fade into,199,398,352,846,True,True,True,True,True,True
+英単語プロジェクト過去分,feel free to,349,1469,522,2098,True,True,True,True,True,True
+英単語プロジェクト過去分,fierce,255,581,424,1260,True,True,True,True,True,True
+英単語プロジェクト過去分,fossil fuels,213,412,375,885,True,True,True,True,True,True
+英単語プロジェクト過去分,frame,271,610,502,1279,True,True,True,True,True,True
+英単語プロジェクト過去分,gain experience,216,345,351,958,True,True,True,True,True,True
+英単語プロジェクト過去分,global influence,203,402,367,877,True,True,True,True,True,True
+英単語プロジェクト過去分,handle,281,929,509,1875,True,True,True,True,True,True
+英単語プロジェクト過去分,healthcare,194,393,347,835,True,True,True,True,True,True
+英単語プロジェクト過去分,hit points,206,405,362,866,True,True,True,True,True,True
+英単語プロジェクト過去分,horizontal slash,215,344,355,950,True,True,True,True,True,True
+英単語プロジェクト過去分,horizontal strike,220,349,363,1000,True,True,True,True,True,True
+英単語プロジェクト過去分,HP,264,463,431,943,True,True,True,True,True,True
+英単語プロジェクト過去分,I mean,317,1466,448,1863,True,True,True,True,True,True
+英単語プロジェクト過去分,imperfect,244,650,454,1247,True,True,True,True,True,True
+英単語プロジェクト過去分,intensity,318,1281,470,2221,True,True,True,True,True,True
+英単語プロジェクト過去分,international politics,281,410,420,1100,True,True,True,True,True,True
+英単語プロジェクト過去分,intervals,195,394,347,833,True,True,True,True,True,True
+英単語プロジェクト過去分,invent,253,627,467,1313,True,True,True,True,True,True
+英単語プロジェクト過去分,itinerary,288,631,495,1998,True,True,True,True,True,True
+英単語プロジェクト過去分,lay off,341,1377,455,2197,True,True,True,True,True,True
+英単語プロジェクト過去分,let out a breath,212,411,379,895,True,True,True,True,True,True
+英単語プロジェクト過去分,lose one's balance,207,406,375,893,True,True,True,True,True,True
+英単語プロジェクト過去分,make sure,273,1270,481,2090,True,True,True,True,True,True
+英単語プロジェクト過去分,not long after,383,1485,560,2176,True,True,True,True,True,True
+英単語プロジェクト過去分,notify,257,746,492,1933,True,True,True,True,True,True
+英単語プロジェクト過去分,obtain,279,1176,465,1858,True,True,True,True,True,True
+英単語プロジェクト過去分,occasion,250,607,479,1396,True,True,True,True,True,True
+英単語プロジェクト過去分,occur,333,1246,374,2174,True,True,True,True,True,True
+英単語プロジェクト過去分,one-handed,197,396,351,841,True,True,True,True,True,True
+英単語プロジェクト過去分,opportunities,224,423,389,917,True,True,True,True,True,True
+英単語プロジェクト過去分,overhead slash,215,414,383,889,True,True,True,True,True,True
+英単語プロジェクト過去分,owe,294,1452,420,1846,True,True,True,True,True,True
+英単語プロジェクト過去分,parcel,254,705,395,1186,True,True,True,True,True,True
+英単語プロジェクト過去分,parry,190,389,335,807,True,True,True,True,True,True
+英単語プロジェクト過去分,particle,194,393,344,832,True,True,True,True,True,True
+英単語プロジェクト過去分,plan on,334,1377,421,2309,True,True,True,True,True,True
+英単語プロジェクト過去分,pretty,239,569,381,1191,True,True,True,True,True,True
+英単語プロジェクト過去分,procedure,258,796,456,1805,True,True,True,True,True,True
+英単語プロジェクト過去分,pseudo,251,530,489,1266,True,True,True,True,True,True
+英単語プロジェクト過去分,raffle,292,1189,479,1924,True,True,True,True,True,True
+英単語プロジェクト過去分,read one's moves,206,405,371,883,True,True,True,True,True,True
+英単語プロジェクト過去分,realm,277,1327,503,2038,True,True,True,True,True,True
+英単語プロジェクト過去分,reimbursement,294,809,520,1877,True,True,True,True,True,True
+英単語プロジェクト過去分,relevant,247,1844,366,723,True,True,True,True,True,True
+英単語プロジェクト過去分,renewable energy,229,428,403,929,True,True,True,True,True,True
+英単語プロジェクト過去分,request,283,575,433,1857,True,True,True,True,True,True
+英単語プロジェクト過去分,require,247,600,410,1810,True,True,True,True,True,True
+英単語プロジェクト過去分,resign,311,1254,406,2132,True,True,True,True,True,True
+英単語プロジェクト過去分,retrieve,202,401,352,856,True,True,True,True,True,True
+英単語プロジェクト過去分,revive,288,1376,430,2059,True,True,True,True,True,True
+英単語プロジェクト過去分,robotics,250,379,372,981,True,True,True,True,True,True
+英単語プロジェクト過去分,saving,254,623,463,1325,True,True,True,True,True,True
+英単語プロジェクト過去分,schedule,195,394,345,835,True,True,True,True,True,True
+英単語プロジェクト過去分,shave,262,569,388,1226,True,True,True,True,True,True
+英単語プロジェクト過去分,significance,297,1379,497,2340,True,True,True,True,True,True
+英単語プロジェクト過去分,signify,262,1305,452,2147,True,True,True,True,True,True
+英単語プロジェクト過去分,silky,257,608,447,1164,True,True,True,True,True,True
+英単語プロジェクト過去分,slightly,257,1220,474,1940,True,True,True,True,True,True
+英単語プロジェクト過去分,smart cities,228,427,390,930,True,True,True,True,True,True
+英単語プロジェクト過去分,social welfare,277,406,414,1104,True,True,True,True,True,True
+英単語プロジェクト過去分,solid field,219,418,378,904,True,True,True,True,True,True
+英単語プロジェクト過去分,spaced repetition,232,431,409,937,True,True,True,True,True,True
+英単語プロジェクト過去分,specimen,255,617,447,1275,True,True,True,True,True,True
+英単語プロジェクト過去分,stance,186,385,331,803,True,True,True,True,True,True
+英単語プロジェクト過去分,straight sword,216,415,384,892,True,True,True,True,True,True
+英単語プロジェクト過去分,strike,338,1437,459,2064,True,True,True,True,True,True
+英単語プロジェクト過去分,submit,279,838,458,1881,True,True,True,True,True,True
+英単語プロジェクト過去分,sword,172,301,292,810,True,True,True,True,True,True
+英単語プロジェクト過去分,tech,291,647,487,1313,True,True,True,True,True,True
+英単語プロジェクト過去分,technological advancements,235,364,390,1066,True,True,True,True,True,True
+英単語プロジェクト過去分,testing yourself,232,431,406,938,True,True,True,True,True,True
+英単語プロジェクト過去分,thrust,187,386,331,813,True,True,True,True,True,True
+英単語プロジェクト過去分,trade,211,340,331,919,True,True,True,True,True,True
+英単語プロジェクト過去分,usual,208,582,404,1281,True,True,True,True,True,True
+英単語プロジェクト過去分,vent,352,529,937,2266,True,True,True,True,True,True
+英単語プロジェクト過去分,vivid,284,1320,501,1995,True,True,True,True,True,True
+英単語プロジェクト過去分,waste management,275,404,430,1084,True,True,True,True,True,True
+英単語プロジェクト過去分,weigh in,335,1400,508,2163,True,True,True,True,True,True
+英単語プロジェクト過去分,would rather,353,1313,459,2367,True,True,True,True,True,True
+英単語プロジェクト過去分,AI,223,1598,330,669,True,True,True,True,True,True
+英単語プロジェクト過去分,API,399,708,403,1389,True,True,True,True,True,True
+英単語プロジェクト過去分,AWS,515,597,514,3468,True,True,True,True,True,True
+英単語プロジェクト過去分,BDNF,441,544,599,2176,True,True,True,True,True,True
+英単語プロジェクト過去分,CSV,368,594,517,2504,True,True,True,True,True,True
+英単語プロジェクト過去分,DX,275,11536,382,747,True,True,True,True,True,True
+英単語プロジェクト過去分,EEZ,366,521,494,2080,True,True,True,True,True,True
+英単語プロジェクト過去分,ERP,322,632,546,1345,True,True,True,True,True,True
+英単語プロジェクト過去分,GDP,341,5439,450,849,True,True,True,True,True,True
+英単語プロジェクト過去分,GMV,375,548,489,2245,True,True,True,True,True,True
+英単語プロジェクト過去分,KPI,213,2009,322,657,True,True,True,True,True,True
+英単語プロジェクト過去分,M&A,301,425,459,2696,True,True,True,True,True,True
+英単語プロジェクト過去分,MagSafe,471,612,517,2592,True,True,True,True,True,True
+英単語プロジェクト過去分,PDCA,256,448,390,5939,True,True,True,True,True,True
+英単語プロジェクト過去分,PR TIMES,526,723,694,2786,True,True,True,True,True,True
+英単語プロジェクト過去分,SaaS,315,4956,426,813,True,True,True,True,True,True
+英単語プロジェクト過去分,setlog,309,488,467,2202,True,True,True,True,True,True
+英単語プロジェクト過去分,Whataboutism,358,529,520,1672,True,True,True,True,True,True
+英単語プロジェクト過去分,YouTube,320,430,408,719,True,True,True,True,True,True
+日本語語彙,C調,402,744,468,1469,True,True,True,True,True,True
+日本語語彙,うだるような,325,590,409,1342,True,True,True,True,True,True
+日本語語彙,うっちゃる,268,609,338,1242,True,True,True,True,True,True
+日本語語彙,うらぶれた,221,1656,334,675,True,True,True,True,True,True
+日本語語彙,おしなべて,331,723,458,1297,True,True,True,True,True,True
+日本語語彙,きっぷのいい,356,714,454,1452,True,True,True,True,True,True
+日本語語彙,しみったれた,348,635,526,1378,True,True,True,True,True,True
+日本語語彙,しんみり,252,513,356,1192,True,True,True,True,True,True
+日本語語彙,とっつきにくい,320,575,404,1284,True,True,True,True,True,True
+日本語語彙,なおざり,313,583,384,1360,True,True,True,True,True,True
+日本語語彙,ほおかむり,361,584,359,1292,True,True,True,True,True,True
+日本語語彙,エッジがきいてる,322,429,427,723,True,True,True,True,True,True
+日本語語彙,キザ,276,545,353,1204,True,True,True,True,True,True
+日本語語彙,シズル感,352,600,413,1369,True,True,True,True,True,True
+日本語語彙,ピーキー,319,596,436,1300,True,True,True,True,True,True
+日本語語彙,ファンシー,349,501,375,1049,True,True,True,True,True,True
+日本語語彙,マゼンタ,410,425,526,2201,True,True,True,True,True,True
+日本語語彙,マンネリ,314,421,415,707,True,True,True,True,True,True
+日本語語彙,メレンゲ,301,435,457,2328,True,True,True,True,True,True
+日本語語彙,レッテル,347,525,405,1290,True,True,True,True,True,True
+日本語語彙,一寸の虫にも五分の魂,366,676,466,1436,True,True,True,True,True,True
+日本語語彙,不精,287,488,358,1027,True,True,True,True,True,True
+日本語語彙,与太話,284,511,356,980,True,True,True,True,True,True
+日本語語彙,伊達,338,628,433,1232,True,True,True,True,True,True
+日本語語彙,半可通,374,576,493,1394,True,True,True,True,True,True
+日本語語彙,反駁,339,628,438,1309,True,True,True,True,True,True
+日本語語彙,古色蒼然,342,637,448,1295,True,True,True,True,True,True
+日本語語彙,合理的,312,419,412,703,True,True,True,True,True,True
+日本語語彙,咀嚼,315,565,406,1259,True,True,True,True,True,True
+日本語語彙,喧伝,299,614,399,1286,True,True,True,True,True,True
+日本語語彙,地縁,322,583,401,1182,True,True,True,True,True,True
+日本語語彙,天王山,312,640,400,1319,True,True,True,True,True,True
+日本語語彙,子煩悩,356,783,446,1349,True,True,True,True,True,True
+日本語語彙,寂寥,282,468,356,915,True,True,True,True,True,True
+日本語語彙,小糠雨,320,541,402,1214,True,True,True,True,True,True
+日本語語彙,廃墟,318,523,394,1206,True,True,True,True,True,True
+日本語語彙,心外,353,573,434,1288,True,True,True,True,True,True
+日本語語彙,悠長,346,571,411,1299,True,True,True,True,True,True
+日本語語彙,惰性,323,438,404,1159,True,True,True,True,True,True
+日本語語彙,憧憬,402,674,498,1336,True,True,True,True,True,True
+日本語語彙,抽象的,437,746,460,3442,True,True,True,True,True,True
+日本語語彙,掘出物,312,419,412,703,True,True,True,True,True,True
+日本語語彙,推挙,315,620,414,1263,True,True,True,True,True,True
+日本語語彙,摩天楼,385,655,514,1385,True,True,True,True,True,True
+日本語語彙,文脈,231,9964,338,681,True,True,True,True,True,True
+日本語語彙,新機軸,340,778,449,1342,True,True,True,True,True,True
+日本語語彙,朴念仁,313,499,367,1176,True,True,True,True,True,True
+日本語語彙,核心,259,6015,366,723,True,True,True,True,True,True
+日本語語彙,氏神,334,580,420,1036,True,True,True,True,True,True
+日本語語彙,気が利く,438,748,463,1476,True,True,True,True,True,True
+日本語語彙,気さく,387,523,471,2217,True,True,True,True,True,True
+日本語語彙,河岸,324,510,380,1092,True,True,True,True,True,True
+日本語語彙,泥縄,290,514,348,1176,True,True,True,True,True,True
+日本語語彙,浮いた話,296,484,363,1042,True,True,True,True,True,True
+日本語語彙,焦る,251,3656,358,711,True,True,True,True,True,True
+日本語語彙,煩悶,299,481,419,1166,True,True,True,True,True,True
+日本語語彙,狼狽,301,614,422,1274,True,True,True,True,True,True
+日本語語彙,瑕疵,303,524,384,1381,True,True,True,True,True,True
+日本語語彙,目抜通り,314,421,415,707,True,True,True,True,True,True
+日本語語彙,眼福,272,482,359,1027,True,True,True,True,True,True
+日本語語彙,粋,339,584,420,1295,True,True,True,True,True,True
+日本語語彙,糊塗,343,627,421,1309,True,True,True,True,True,True
+日本語語彙,背徳感,329,531,429,1026,True,True,True,True,True,True
+日本語語彙,藪蛇,303,523,388,1242,True,True,True,True,True,True
+日本語語彙,追分,324,552,420,1188,True,True,True,True,True,True
+日本語語彙,退廃的,348,583,437,1262,True,True,True,True,True,True
+日本語語彙,遥拝,344,590,467,1314,True,True,True,True,True,True
+日本語語彙,配慮,454,835,792,5369,True,True,True,True,True,True
+日本語語彙,鋭意,274,465,360,947,True,True,True,True,True,True
+日本語語彙,鍵っ子,354,555,452,1124,True,True,True,True,True,True
+日本語語彙,随意,289,494,363,1135,True,True,True,True,True,True
+日本語語彙,隔世の感,331,663,442,1348,True,True,True,True,True,True
+日本語語彙,風合い,437,739,471,1375,True,True,True,True,True,True
+日本語語彙,風情,315,505,384,1219,True,True,True,True,True,True
+日本語語彙,ミネルバの梟が黄昏に飛び立つ,374,624,533,940,True,True,True,True,True,True
+日本語語彙,しょっつる,293,565,425,838,True,True,True,True,True,True
